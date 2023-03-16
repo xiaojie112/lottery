@@ -11,6 +11,11 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IStrategyDao {
 
+    /**
+     * 根据策略ID插叙策略配置信息
+     * @param strategyId 策略ID
+     * @return 策略信息
+     */
     Strategy queryStrategy(Long strategyId);
 
 }

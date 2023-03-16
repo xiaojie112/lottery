@@ -88,6 +88,7 @@ public class Constants {
          */
         SUCCESS(1, "已中奖"),
 
+        //todo 不太理解什么是兜底奖
         /**
          * 兜底奖
          */
@@ -118,4 +119,82 @@ public class Constants {
         }
     }
 
+
+    /**
+     * 发奖状态
+     */
+    public enum GiveAwardState{
+        /**
+         * 未发奖
+         */
+        WAIT(0,"未发奖"),
+
+        /**
+         *  已经发奖
+         */
+        SUCCESS(1, "发奖成功"),
+
+        /**
+         * 发奖失败
+         */
+        FAIL(2,"发奖失败");
+
+
+        private Integer code;
+        private String info;
+
+        GiveAwardState(Integer code, String info) {
+            this.code = code;
+            this.info = info;
+        }
+
+
+        public Integer getCode() {
+            return code;
+        }
+
+        public void setCode(Integer code) {
+            this.code = code;
+        }
+
+        public String getInfo() {
+            return info;
+        }
+
+        public void setInfo(String info) {
+            this.info = info;
+        }
+    }
+
+    public enum AwardType{
+        CHANGECODE(1,"兑换码"),
+        COUPON(2,"优惠券"),
+        REAL(3,"实物奖品"),
+        TEXT(4,"文字描述");
+
+
+        private Integer type;
+        private String typeInfo;
+
+        AwardType(Integer type, String typeInfo) {
+            this.type = type;
+            this.typeInfo = typeInfo;
+        }
+
+        public Integer getType() {
+            return type;
+        }
+
+        public void setType(Integer type) {
+            this.type = type;
+        }
+
+        public String getTypeInfo() {
+            return typeInfo;
+        }
+
+        public void setTypeInfo(String typeInfo) {
+            this.typeInfo = typeInfo;
+        }
+    }
 }

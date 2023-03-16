@@ -11,7 +11,7 @@ public class DrawAwardInfo {
     /**
      * 奖品ID
      */
-    private String rewardId;
+    private String awardId;
 
     /**
      * 奖品名称
@@ -22,16 +22,16 @@ public class DrawAwardInfo {
     }
 
     public DrawAwardInfo(String rewardId, String awardName) {
-        this.rewardId = rewardId;
+        this.awardId = rewardId;
         this.awardName = awardName;
     }
 
     public String getRewardId() {
-        return rewardId;
+        return awardId;
     }
 
     public void setRewardId(String rewardId) {
-        this.rewardId = rewardId;
+        this.awardId = rewardId;
     }
 
     public String getAwardName() {
