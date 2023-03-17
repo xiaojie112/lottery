@@ -1,10 +1,9 @@
 package cn.itedus.lottery.domain.strategy.model.vo;
 
 /**
- * @description: 中奖奖品信息
- * @author：小傅哥，微信：fustack
- * @date: 2021/8/28
- * @Copyright： 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * @description:
+ * @author：肖杰
+ * @date: 2023-03-17
  */
 public class DrawAwardInfo {
 

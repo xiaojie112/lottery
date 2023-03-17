@@ -1,7 +1,8 @@
 package cn.itedus.lottery.domain.strategy.repository;
 
 import cn.itedus.lottery.domain.strategy.model.aggregates.StrategyRich;
-import cn.itedus.lottery.infrastructure.po.Award;
+import cn.itedus.lottery.domain.strategy.model.vo.AwardBriefVO;
+
 
 import java.util.List;
 
@@ -10,11 +11,15 @@ import java.util.List;
  * @author：肖杰
  * @date: 2023-03-16
  */
+
+/**
+ * 数据仓储功能的实现放到基础层实现
+ */
 public interface IStrategyRepository {
 
     StrategyRich queryStrategyRich(Long strategyId);
 
-    Award queryAwardInfo(String awardId);
+    AwardBriefVO queryAwardInfo(String awardId);
 
     List<String> queryNoStockStrategyAwardList(Long strategyId);
 
