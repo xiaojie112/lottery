@@ -52,6 +52,7 @@ public class SpringRunnerTest {
     @Resource
     private GiveAwardFactory giveAwardFactory;
 
+
     @Test
     public void test_giveAward(){
         DrawResult drawResult = drawExec.doDrawExec(new DrawReq("Damon",10001l));
@@ -62,9 +63,9 @@ public class SpringRunnerTest {
 
         //中奖成功进行发奖
         DrawAwardInfo drawAwardInfo = drawResult.getDrawAwardInfo();
-        Award award = awardDao.queryAwardInfo(drawAwardInfo.getRewardId());
-        GiveAward giveAwardService = giveAwardFactory.getGiveAwardService(award.getAwardType());
-        GiveAwardResult giveAwardResult = giveAwardService.doGiveAward(new GiveAwardRequest(drawResult.getuId(), "orderID", award.getAwardId(), award.getAwardName(), award.getAwardContent()));
+//        Award award = awardDao.queryAwardInfo(drawAwardInfo.getRewardId());
+        GiveAward giveAwardService = giveAwardFactory.getGiveAwardService(drawAwardInfo.getAwardType());
+        GiveAwardResult giveAwardResult = giveAwardService.doGiveAward(new GiveAwardRequest(drawResult.getuId(), "orderID", drawAwardInfo.getAwardId(), drawAwardInfo.getAwardName(), drawAwardInfo.getContent()));
         logger.info("用户{}，发奖状态:{}",giveAwardResult.getuId(), giveAwardResult.getInfo());
     }
 

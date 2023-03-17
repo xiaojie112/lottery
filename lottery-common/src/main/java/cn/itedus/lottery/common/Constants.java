@@ -167,10 +167,11 @@ public class Constants {
     }
 
     public enum AwardType{
-        CHANGECODE(1,"兑换码"),
-        COUPON(2,"优惠券"),
-        REAL(3,"实物奖品"),
-        TEXT(4,"文字描述");
+        TEXT(1,"文字描述"),
+        CHANGECODE(2,"兑换码"),
+        COUPON(3,"优惠券"),
+        REAL(4,"实物奖品");
+
 
 
         private Integer type;
