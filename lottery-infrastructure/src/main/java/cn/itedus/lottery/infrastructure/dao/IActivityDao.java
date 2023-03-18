@@ -1,5 +1,6 @@
 package cn.itedus.lottery.infrastructure.dao;
 
+import cn.itedus.lottery.domain.activity.model.vo.AlterStatusVO;
 import cn.itedus.lottery.infrastructure.po.Activity;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -24,4 +25,11 @@ public interface IActivityDao {
     */
    Activity queryActivityById(Long activityId);
 
+
+   /**
+    * 变更活动的状态
+    * @param alterStatusVO
+    * @return
+    */
+   Integer alterStatus(AlterStatusVO alterStatusVO);
 }
